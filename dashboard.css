@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ADC4CE;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    color: #ADC4CE;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #7a8c95;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content button {
+    color: #ADC4CE;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border: none;
+    background-color: white;
+    width: 100%;
+    text-align: left;
+}
+
+.dropdown-content button:hover {
+    background-color: #7a8c95;
+}
+
+.container {
+    padding: 20px;
+}
+
+.button-list {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button-list button {
+    background-color: #ADC4CE;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.button-list button:hover {
+    background-color: #7a8c95;
+}
+
+.button-list button.active {
+    background-color: #5d707a;
+}
+
+.form-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+.form-content {
+    display: none;
+}
+
+.form-content h2 {
+    color: #ADC4CE;
+}
+
+.form-content label {
+    display: block;
+    margin-top: 10px;
+}
+
+.form-content input, .form-content select, .form-content button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+}
+
+.form-content button {
+    background-color: #ADC4CE;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.form-content button:hover {
+    background-color: #7a8c95;
+}

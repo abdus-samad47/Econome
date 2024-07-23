@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EconoMe - Login/Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <center>
+            <h1>EconoMe</h1>
+        </center>
+        <div class="form-container">
+            <!-- Tabs for switching between Login and Signup -->
+            <div class="tabs">
+                <button class="tab-link active" onclick="openForm(event, 'Login')">Login</button>
+                <button class="tab-link" onclick="openForm(event, 'Signup')">Signup</button>
+            </div>
+
+            <!-- Login Form -->
+            <div id="Login" class="form-content active-form">
+                <form action="login.php" method="post">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-action">
+                        <button type="submit" class="action-button">Login</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Signup Form -->
+            <div id="Signup" class="form-content">
+                <form action="signup.php" method="post">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-action">
+                        <button type="submit" value="Submit" class="action-button">Signup</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openForm(evt, formName) {
+            var i, formContent, tabLinks;
+            formContent = document.getElementsByClassName("form-content");
+            for (i = 0; i < formContent.length; i++) {
+                formContent[i].style.display = "none";
+            }
+            tabLinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tabLinks.length; i++) {
+                tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+            }
+            document.getElementById(formName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('error')) {
+                alert('Invalid email or password. Please try again.');
+            }
+            if (urlParams.has('signup')) {
+                if (urlParams.get('signup') === 'success') {
+                    alert('Signup successful! Login in.');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
