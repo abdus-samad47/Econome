@@ -1,9 +1,9 @@
 Expense Tracker
 
-Overview
+Overview:
 The Expense Tracker is a web application designed to help users efficiently manage and monitor their expenses. It categorizes expenses, tracks different payment methods, and provides insightful reports. This project uses HTML, CSS, JavaScript, and AJAX for the frontend, PHP for the backend, and SQL for the database, emphasizing secure user authentication and smooth user experience.
 
-Features
+Features:
 User Authentication: Secure signup and login.
 Expense Management: Add, view, and delete expenses.
 Categorization: Predefined categories (food, housing, transportation, etc.).
@@ -37,7 +37,7 @@ Run the Application:
 Host the project on a local server using tools like XAMPP or WAMP.
 Access the application via localhost.
 
-File Structure
+File Structure:
 index.html: Entry point with login and signup forms.
 dashboard.php: Main dashboard for managing expenses.
 db.php: Database connection file.
@@ -54,8 +54,8 @@ generateReport.php: Generates PDF reports of expenses.
 style.css: Styling for the application.
 dashboard.css: Styling for the dashboard.
 
-Contribution
+Contribution:
 Feel free to fork this repository, submit issues, and make pull requests to improve the application. Contributions are highly appreciated.
 
-License
+License:
 This project is licensed under the MIT License - see the LICENSE file for details.
